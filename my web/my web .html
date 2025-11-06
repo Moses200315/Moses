@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>my web page</title>
+        <style>
+            header{
+                display: none;
+            }
+            nav{
+                text-align: center;
+                padding: 20px;
+                background-color: yellow;
+            }
+            nav a{
+                color: black;
+                text-decoration: none;
+                font-size: 20px;
+                margin: 20px;
+            }
+            nav a:hover{
+                text-decoration: underline;
+                color: red;
+            }
+            .home{
+                background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(kky.jpg);
+                background-size: cover;
+                height: 180vh;
+                width: 100%;
+                text-align: center;
+                font-size: 60px;
+                color: yellow;
+                padding-top: 20px;
+                animation: fadeIn 3s ease;
+            }
+            .profile-pic {
+            position:relative;
+            left: 540px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .profile-pic:hover{
+            transform: scale(1.05);
+        }
+        .tagline {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+        .buttons button {
+            background: transparent;
+            border: 2px solid yellow;
+            color: yellow;
+            padding: 10px 25px;
+            margin: 10px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        .buttons button:hover {
+            background: yellow;
+            color: black;
+            transform: scale(1.05);
+        }
+        .socials {
+            margin-top: 20px;
+        }
+        .socials a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .socials a:hover {
+            color: yellow;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1; }
+        }
+
+        .about{
+            background-color: white;
+            margin: auto;
+        }
+        .about-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .about-picture{
+            height: 250px;
+            width: 250px;
+            border-radius: 20px;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            object-fit: cover;
+        }
+        .about-text {
+      max-width: 600px;
+      margin: 20px;
+      text-align: left;
+    }
+    .education{
+        text-align: center;
+        margin: auto;
+    }
+            h1{
+                text-align: center;
+            }
+            .div{
+                border: 2px solid gold;
+                border-radius: 10px;
+                margin-bottom: 5px;
+            }
+            h5{
+                margin-top: 500px;
+                color: black;
+                text-align: center;
+            }
+            p{
+                font-size: 25px;
+            }
+            .knowledge{
+                text-align: center;
+                height: auto;
+            }
+            progress{
+                width: 70%;
+                height: 25px;
+            }
+            .project {
+            background: white;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+            form{
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                margin: auto;
+            }
+            textarea{
+                border: 2px solid green;
+                width: 100%;
+                border-radius: 5px;
+                height: 100px;
+            }
+            input,button{
+                border: 2px solid green;
+                border-radius: 5px;
+                width: auto;
+                height: 50px;
+            }
+            button{
+                color: red;
+                background-color : yellowgreen;
+                font-size: 20px;
+            }
+            button:hover{
+                color: blue;
+            }
+            footer{
+                background-color: black;
+                color: green;
+                text-align: center;
+                padding: 15px;
+                margin-top: 40px;
+            }
+            @media screen and (max-width: 600px) {
+                nav{
+                    display: none;
+                }
+                header{
+                    display: block;
+                    background-color: green;
+                    padding: 15px;
+                }
+                .button{
+                color: red;
+                background-color: green;
+                width: 70px;
+                border: none;
+            }
+            .link{
+                border: 1px solid red;
+                border-radius: 5px;
+                background-color: aqua;
+                display: none;
+                flex-direction: column;
+                width: 100px;
+
+            }
+            .link a{
+                display: block;
+                padding: 10px;
+                text-decoration: none;
+                color: green;
+            }
+            .link a:hover{
+                color: red;
+                text-decoration: bold;
+                font-size: 13px;
+            }
+            .profile-pic {
+            position: relative;
+            left: auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+            .home{
+                background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(kky.jpg);
+                background-position: center;
+                width: auto;
+                text-align: center;
+                padding-top: 20px;
+                justify-content: center;
+            }
+            .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-text {
+        text-align: center;
+      }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <button class="button" id="menuBtn">≡Menu</button>
+            <div class="link" id="menuLinks">
+               <a href="#home">HOME</a>
+               <a href="#about">ABOUT</a>
+               <a href="#skills">SKILLS</a>
+               <a href="#projects">PROJECTS</a>
+               <a href="#contact">CONTACT</a>
+            </div>
+        </header>
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+        <div id="home" class="div">
+            <div class="home">
+                <img src="kky.jpg" alt="Moses Kaaya" class="profile-pic">
+                <h3>Hi, I'm <span>Moses Kaaya</span> 👋</h3>
+            <p>Web Developer | Student | Creative Designer</p>
+            <p class="tagline">"Turning ideas into interactive web experiences."</p>
+            <div class="buttons">
+                <button onclick="document.location='#projects'">View My Projects</button>
+                <button onclick="document.location='#contact'">Hire Me</button>
+            </div>
+            <div class="socials">
+                <a href="https://www.facebook.com/profile.php?id=61561712218148">Facebook</a>|<a href="https://wa.me/255763575865">WhatsApp</a>
+            </div>
+            </div>
+        </div>
+        <div id="about" class="div">
+            <h1>About Me</h1>
+            <div class="about">
+                <div class="about-container">
+                    <img src="kaaya.jpeg" class="about-picture">
+                    <div class="about-text">
+                          <p>Hi! I'm <b>Moses Kaaya</b>, a passionate web developer and creative designer from Arusha, Tanzania.  
+                           I enjoy building websites, solving problems, and learning new technologies.</p>
+                           <p>Currently, I’m studying at the <b>Institute of Finance Management (IFM)</b> in Dar es Salaam, pursuing a degree in Information Technology.  
+                            My goal is to become a professional full-stack developer and create useful tools that make people's lives easier.</p>
+                             <div class="buttons">
+                                    <button onclick="document.location='#projects'">See My Projects</button>
+                              </div>
+                    </div>
+                </div>
+                    <div class="education">
+                                 <h1>Education</h1>
+                          <p><b>Institute of Finance Management (IFM)</b> — BSc. Information Technology (2024– )</p>
+                          <p><b>Inyonga Secondary School</b> — Advanced Level (2022–2024)</p>
+                           <p><b>Akeri Secondary School</b> — O-Level (2018–2021)</p>
+                    </div>
+            </div>
+        </div>
+        <div class="div">
+        <div id="skills" class="knowledge">
+            <h1>MY SKILLS</h1>
+            <p>HTML 80%</p>
+            <progress value="80" max="100"></progress>
+            <P>CSS 60%</P>
+            <progress value="60" max="100"></progress>
+            <P>SQL 50%</P>
+            <progress value="50" max="100"></progress>
+            <P>JAVASCRIPT 20%</P>
+            <progress value="20" max="100"></progress>
+        </div>
+        </div>
+        <div id="projects" class="div">
+            <div class="project">
+            <h3>Personal Portfolio Website</h3>
+            <p>This portfolio you are viewing now — built using pure HTML, CSS, and a bit of JavaScript.</p>
+        </div>
+        </div>
+        <div class="div">
+        <form onsubmit="return validateForm()" id="contact" action="mailto:mkdekaaya85@gmail.com">
+            <h1>Contact Me</h1>
+            <label for="name">Name:</label><input type="text"placeholder="enter your name" id="name"><br><br>
+            Email:<input type="email" placeholder="enter your email" id="email"><br><br>
+            Message:<textarea placeholder="Message" id="message"></textarea><br><br>
+            <button type="submit">submit</button>
+        </form>
+        </div>
+        <footer>
+            <p>2025&copy Moses Kaaya|All Rights Reserved</p>
+        </footer>
+        <script>
+            let menuBtn = document.getElementById("menuBtn");
+            let menuLinks =document.getElementById("menuLinks");
+
+            menuBtn.addEventListener("click", function(){
+                if(menuLinks.style.display==="flex"){
+                    menuLinks.style.display="none";
+                }else
+                {
+                    menuLinks.style.display="flex";
+                }
+            });
+            function validateForm(){
+                let name=document.getElementById("name").value;
+                let email=document.getElementById("email").value;
+                let message=document.getElementById("message").value;
+
+                if(name===""||email===""||message===""){
+                    alert("fill all fields");
+                    return false;
+                }
+                alert("submission successfuly");
+                return true;
+            }
+            document.getElementById("contact").addEventListener("submit",function(e){
+                e.preventDefault();
+                let name=document.getElementById("name").values;
+                let message=document.getElementById("message").value;
+
+                if(name===""||message===""){
+                    alert("The name and message fields should be field");
+                    return false;
+                }
+            });
+        </script>
+    </body>
+</html>
